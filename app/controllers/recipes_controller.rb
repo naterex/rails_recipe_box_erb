@@ -26,6 +26,11 @@ class RecipesController < ApplicationController
   end
 
   def update
+    if @recipe.update(params_recipe)
+      redirect_to @recipe
+    else
+      render 'edit'
+    end
   end
 
   def destroy
