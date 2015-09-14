@@ -1,7 +1,9 @@
 class RecipesController < ApplicationController
 
+  before_action :find_recipe, only: [:show, :edit, :update, :destroy]
+
   def index
-    @recipe = Recipe.all.order('created_at DESC')
+    @recipes = Recipe.all.order('created_at DESC')
   end
 
   def new
@@ -31,7 +33,12 @@ class RecipesController < ApplicationController
 
   private
 
+    def find_recipe
+      @recipe = Recipe.find(params[:id])
+    end
+
     def params_recipe
+      params.require(:recipe).permit(:title, :description)
     end
 
 

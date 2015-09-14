@@ -1,0 +1,7 @@
+<% @recipes.each do |recipe| %>
+  <h2><%= link_to recipe.title, recipe %></h2>
+  <div>
+    <%= truncate(recipe.description, length: 35) %>
+  </div>
+  <br>
+<% end %>
