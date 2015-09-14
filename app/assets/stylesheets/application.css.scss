@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+@import 'normalize';
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* Center align search form in navbar */
+// .navbar-form
+// {
+//     position: absolute;
+//     width: 100%;
+//     left: 0;
+//     text-align: center;
+//     vertical-align: center;
+//     margin: auto;
+// }

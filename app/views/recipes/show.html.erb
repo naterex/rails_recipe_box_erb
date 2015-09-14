@@ -4,10 +4,10 @@
 </div>
 <br>
 <div>
-  <%= link_to "Edit Recipe", edit_recipe_path(@recipe), class: "btn btn-success" %>
+  <%= link_to "Edit", edit_recipe_path(@recipe), class: "btn btn-success" %>
   <%= link_to "Delete", @recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
 </div>
 <br>
 <div>
-  <%= link_to "Back", root_path, class: "btn btn-primary" %>
+  <%= link_to "Back", root_path, class: "btn btn-default" %>
 </div>
