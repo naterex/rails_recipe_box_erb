@@ -12,8 +12,10 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(params_recipe)
     if @recipe.save
-      redirect_to @recipe, success: 'Recipe was successfully created'
+      flash[:notice] = "Recipe was successfully created"
+      redirect_to @recipe
     else
+      flash.now[:error] = @recipe.errors.full_messages.to_sentence
       render 'new'
     end
   end
@@ -26,15 +28,18 @@ class RecipesController < ApplicationController
 
   def update
     if @recipe.update(params_recipe)
-      redirect_to @recipe, success: 'Recipe was successfully edited'
+      flash[:notice] = "Recipe was successfully edited"
+      redirect_to @recipe
     else
+      flash.now[:error] = @recipe.errors.full_messages.to_sentence
       render 'edit'
     end
   end
 
   def destroy
     @recipe.destroy
-    redirect_to root_path, success: 'Recipe was successfully deleted'
+    flash[:notice] = "Recipe was successfully deleted"
+    redirect_to root_path
   end
 
   private

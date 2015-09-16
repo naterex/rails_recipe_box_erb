@@ -1,0 +1,27 @@
+<% flash.each do |type, message| %>
+
+  <div class="alert <%= bootstrap_class_for(type) %>">
+    <a href="#" data-dismiss="alert" class="close">×</a>
+
+    <% if @recipe.present? && @recipe.errors.any? %>
+
+      <p>
+        <%= pluralize(@recipe.errors.count, "error") %> prevented this recipe from saving:
+      </p>
+
+      <ul>
+        <% @recipe.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+
+    <% else %>
+
+      <p>
+        <%= message %>
+      </p>
+
+    <% end %>
+
+  </div>
+<% end %>
