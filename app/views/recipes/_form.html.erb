@@ -1,11 +1,11 @@
-<%= form_for @recipe, html: { multipart: true } do |f| %>
+<%= simple_form_for @recipe, html: { multipart: true } do |f| %>
 
-  <%= f.label :title, input_html: { class: 'form-control' } %><br>
-  <%= f.text_field :title %><br>
+  <%= f.input :title, input_html: { class: 'form-control form-horizontal' } %>
   <br>
-  <%= f.label :description, input_html: { class: 'form-control' } %><br>
-  <%= f.text_area :description %><br>
+  <%= f.input :description, input_html: { class: 'form-control form-horizontal', rows: "4" } %>
   <br>
-  <%= f.submit class: "btn btn-success" %>
+  <%= f.file_field :image, as: :file %>
+  <br>
+  <%= f.button :submit, class: "btn btn-success" %>
 
 <% end %>
