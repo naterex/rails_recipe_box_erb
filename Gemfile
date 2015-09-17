@@ -30,6 +30,8 @@ gem 'simple_form', '~> 3.1.1'
 gem 'paperclip', '~> 4.3.1'
 # Unobtrusive nested forms handling, using jQuery
 gem 'cocoon', '~> 1.2.6'
+# Flexible authentication solution for Rails with Warden
+gem 'devise', '~> 3.5.2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
