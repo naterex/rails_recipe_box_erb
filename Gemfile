@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.2.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -9,7 +10,7 @@ gem 'pg'
 
 # tapsicle gem to import sqlite3 data to pg
 # gem 'taps', '~> 0.3.24'
-gem 'tapsicle', '~> 0.4.1'
+# gem 'tapsicle', '~> 0.4.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -61,3 +62,6 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
