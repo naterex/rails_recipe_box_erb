@@ -26,9 +26,11 @@
     <div class="col-md-6">
       <div id="directions">
         <h2>Directions</h2>
-        <% @recipe.directions.each do |direction| %>
-          <li><%= direction.step %></li>
-        <% end %>
+        <ol>
+          <% @recipe.directions.each do |direction| %>
+            <li><%= direction.step %></li>
+          <% end %>
+        </ol>
       </div>
     </div>
   </div>

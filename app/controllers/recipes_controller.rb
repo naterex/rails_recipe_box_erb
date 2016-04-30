@@ -11,7 +11,7 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = current_user.recipes.build(recipe_params)
+    @recipe = current_user.recipes.build(params_recipe)
 
     if @recipe.save
       flash[:notice] = "Recipe was successfully created"
