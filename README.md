@@ -1,6 +1,6 @@
 # README
 
-This is a project to make an online Recipe Box using Ruby on Rails.
+This is a project to make an online Recipe Vault using Ruby on Rails.
 
 Users can create recipes that include mutiple ingredients and directions for each one.
 
